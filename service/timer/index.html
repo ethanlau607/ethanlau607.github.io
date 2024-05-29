@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ethan code</title>
+	<style>
+        *{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+    }
+
+    
+
+    body {
+            
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+    .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        width: 350px;
+        text-align: center;
+    }
+
+    .content{
+        
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: black;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .btn {
+        margin: 10px;
+        border: 0;
+        border-radius: 5px;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .start{
+        color: black;
+        background-color: #1f3;
+    }
+    .stop{
+        color: black;
+        background-color: #E00;
+    }
+
+    #continue, .stop, #start{
+        display: none;
+    }
+
+
+    #seconds{
+        width: 250px;
+        background: none;
+        outline: none;
+        border: none;
+        border-bottom: 4px solid black;
+        padding: 1rem;
+        font-size: 16px;
+        color: black;
+    }
+
+    #seconds::placeholder{
+        color: black;
+    }
+    
+    
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9218865709942607"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">計時器</h1>
+        <div class="content">
+            <div class="counter">
+            </div>
+        </div>
+    	<input id="seconds" type="number">
+    	<div class="button-container">
+    		<button class="btn start" id="start" value="1" onclick="check(this)">開始</button>
+    		<button class="btn start" id="continue" value="1" onclick="check(this)">繼續</button>
+    		<button class="btn stop" id="stop" value="0" onclick="check(this)">停止</button>
+    	</div>
+        
+    	<button class="btn start" id="submit" onclick="subm()">開始</button>
+        <br>
+        <button class="btn" onclick="location.href='./'">重設</button>
+        <button class="btn" onclick="location.href='../../'">返回</button>
+    </div>
+    <script>
+        const counter = document.querySelector('.counter');
+        const btn = document.querySelector('.buttons');
+        const secondsInput = document.getElementById('seconds');
+
+       
+        
+        var seconds;
+        var minuts;
+        var remseconds;
+        var toCount;
+
+        function subm(){
+            seconds = Number(secondsInput.value);
+            if (seconds==0){
+                alert("秒數不能為零")
+            }else{
+                display("submit", "start");
+            
+                secondsInput.style.display = "none";
+                counting();
+            }
+            
+        }
+
+        function display(first, second){
+            document.getElementById(first).style.display = "none";
+            document.getElementById(second).style.display = "block";
+        }
+
+        function check(stat){
+            toCount = stat.value;
+            if(stat.id == "start"){
+                display("start", "stop");
+            }
+            else if(stat.id == "stop"){
+                display("stop", "continue");
+            }
+            else{
+                display('continue', "stop");
+            }
+        }
+
+        function count(){
+            if(seconds > 0){
+            if(toCount == true){
+                    seconds--;
+                    remseconds = seconds % 60;
+                    minuts = Math.floor(seconds / 60);
+
+                    if(remseconds < 10){
+                        remseconds = "0" + remseconds;
+                    }
+
+                    if(minuts < 10){
+                        minuts = "0" + minuts;
+                    }
+
+                    counter.innerHTML = minuts + " : " + remseconds;
+            }
+            }
+            else{
+                counter.innerHTML = "時間到!";
+                btn.style.opacity = '0';
+            }
+        }
+
+        function counting(){
+            remseconds = seconds % 60;
+        minuts = Math.floor(seconds / 60);
+
+        if(remseconds < 10){
+            remseconds = "0" + remseconds;
+        }
+
+        if(minuts < 10){
+            minuts = "0" + minuts;
+        }
+
+        counter.innerHTML = minuts + " : " + remseconds;
+        setInterval(count, 1000);
+        }
+
+
+    </script>
+</body>
+</html>

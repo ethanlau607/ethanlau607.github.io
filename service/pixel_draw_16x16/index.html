@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ethan code</title>
+    <style>
+    body{
+        background-color: lightgray;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .color {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .grid-item {
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      border: 1px solid black; /* 可选：添加边框样式 */
+    }
+
+    .color-option {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      border: 1px solid black;
+    }
+    .color-option img{
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      
+    }
+    button{
+        border: 1px none;
+        border-radius: 5px;
+        font-size: large;
+        background-color: #494eea;
+        color: white;
+    }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9218865709942607"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <td>
+                <h1>像素畫繪製器</h1>
+                <div>
+                    <div class="color">
+                        <div class="color-option" style="background-color: red" onclick="selectColor('red')"></div>
+                        <div class="color-option" style="background-color: orangered" onclick="selectColor('orangered')"></div>
+                        <div class="color-option" style="background-color: orange" onclick="selectColor('orange')"></div>
+                        <div class="color-option" style="background-color: yellow" onclick="selectColor('yellow')"></div>
+                    </div>
+                    
+                    <div class="color">
+                        <div class="color-option" style="background-color: lightgreen" onclick="selectColor('lightgreen')"></div>
+                        <div class="color-option" style="background-color: greenyellow" onclick="selectColor('greenyellow')"></div>
+                        <div class="color-option" style="background-color: yellowgreen" onclick="selectColor('yellowgreen')"></div>
+                        <div class="color-option" style="background-color: green" onclick="selectColor('green')"></div>
+                    </div>
+                    
+                    <div class="color">
+                        <div class="color-option" style="background-color: lightblue" onclick="selectColor('lightblue')"></div>
+                        <div class="color-option" style="background-color: skyblue" onclick="selectColor('skyblue')"></div>
+                        <div class="color-option" style="background-color: blue" onclick="selectColor('blue')"></div>
+                        <div class="color-option" style="background-color: purple" onclick="selectColor('purple')"></div>
+                    </div>
+                    
+                    <div class="color">
+                        <div class="color-option" style="background-color: pink" onclick="selectColor('pink')"></div>
+                        <div class="color-option" style="background-color: white" onclick="selectColor('white')"></div>
+                        <div class="color-option" style="background-color: grey" onclick="selectColor('grey')"></div>
+                        <div class="color-option" style="background-color: black" onclick="selectColor('black')"></div>
+                    </div>
+                    <br>
+                        
+                    <div>
+                        <p style="display: inline;">自訂顏色:</p>
+                        <input type="color" value="#ffffff" id="colorPicker"  style="display: inline;" onchange="selectColor(document.getElementById('colorPicker').value)">
+                        
+                    </div>
+                    <br>
+                    <button onclick="exportToPNG()">匯出成 PNG</button>
+                    <br>
+                    <br>
+                    <button onclick="location.href='./'">重設</button>
+                    <button onclick="location.href='../../'">返回</button>
+                </div>
+            </td>
+            <td width="20%">
+
+            </td>
+            <td>    
+                <div class="grid">
+                    <!-- 生成 16x16 個格子 -->
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div><div class="grid">
+                    
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    <div class="grid-item" onclick="changeColor(this)" style="background-color: white"></div>
+                    </div>
+                </div>
+                </td>
+        </tr>
+    </table>
+  
+  
+  
+  <script>
+    
+    var selectedColor = 'black'; 
+
+    function changeColor(element) {
+      element.style.backgroundColor = selectedColor;
+    }
+
+    function selectColor(color) {
+      selectedColor = color;
+    }
+
+    function exportToPNG() {
+      
+      var gridItems = document.getElementsByClassName('grid-item');
+      var colors = [];
+      for (var i = 0; i < gridItems.length; i++) {
+        colors.push(gridItems[i].style.backgroundColor);
+      }
+
+      
+      var canvas = document.createElement('canvas');
+      canvas.width = 500;
+      canvas.height = 500; 
+      var ctx = canvas.getContext('2d');
+
+      
+      var gridSize = canvas.width / 16;
+
+      
+      var x = 0;
+      var y = 0;
+      for (var i = 0; i < colors.length; i++) {
+        ctx.fillStyle = colors[i];
+        ctx.fillRect(x, y, gridSize, gridSize);
+        x += gridSize;
+        if (x >= canvas.width) {
+          x = 0;
+          y += gridSize;
+        }
+      }
+
+      
+      var exportWindow = window.open();
+      exportWindow.document.write('<img src="' + canvas.toDataURL() + '">');
+    }
+
+  </script>
+  
+</body>
+</html>
