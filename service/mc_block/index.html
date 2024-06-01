@@ -1,0 +1,3143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <title>Ethan code</title>
+        <style>
+            * {box-sizing: border-box}
+
+            body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial;
+            }
+
+            .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 10%;
+            }
+
+            .tablink:hover {
+            background-color: #777;
+            }
+
+
+            .tabcontent {
+            color: white;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+            }
+
+            .item{
+                display: flex;
+                text-align: center;
+            }
+            .box {
+                display:flex;
+                text-align: center;
+            }
+            mode-viewer {width: 800px; height: 500px; margin:0, auto}
+            button{
+                border: none;
+                border-radius: 10px;
+                font-size:xx-large;
+                margin: 1;
+                background-color: rgb(20, 245, 0)
+            }
+            .select_roll{
+                display: flex;
+            }
+            .select_item{
+                display: flex;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+    <button class="tablink" onclick="openPage('礦物', this, 'red')"  id="defaultOpen">磺物</button>
+    <button class="tablink" onclick="openPage('木', this, 'green')">木</button>
+    <button class="tablink" onclick="openPage('牆', this, 'blue')">牆</button>
+    <button class="tablink" onclick="openPage('柵欄', this, 'orange')">柵欄</button>
+    <button class="tablink" onclick="openPage('柵欄門', this, 'red')">柵欄門</button>
+    <button class="tablink" onclick="location.href='../../'">返回</button>
+
+    <div id="礦物" class="tabcontent">
+        <h3>礦物</h3>
+        <div class="item">
+            <div class="box" id="煤炭">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/煤炭.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/煤炭.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="diamond">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/diamond.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/diamond.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="gold">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/gold.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/gold.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="redstone">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/redstone.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/redstone.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class = "box" id="iron">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/iron.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/iron.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="綠寶石">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/綠寶石.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/綠寶石.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+            <div class = "box" id="銅">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="青金石">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/青金石.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/青金石.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class = "box" id="遠古殘骸">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/遠古殘骸.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/遠古殘骸.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+            <div class = "box" id="下界gold">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/下界gold.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/下界gold.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="下界石英">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/下界石英.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/下界石英.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="deep_diamond">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/deep_diamond.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/deep_diamond.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class = "box" id="deep_gold">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/deep_gold.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/deep_gold.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+            <div class = "box" id="deep_iron">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/deep_iron.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/deep_iron.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="deep_redstone">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/deep_redstone.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/deep_redstone.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="deep_煤炭">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/deep_煤炭.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/deep_煤炭.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class = "box" id="deep_綠寶石">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/deep_綠寶石.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/deep_綠寶石.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+            <div class = "box" id="deep_銅">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/deep_銅.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/deep_銅.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="deep_青金石">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/deep_青金石.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/deep_青金石.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="org_iron">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/org_iron.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/org_iron.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class = "box" id="org_gold">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/org_gold.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/org_gold.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+            <div class = "box" id="org_銅">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/org_銅.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/org_銅.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="diamond_block">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/diamond_block.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/diamond_block.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="iron_block">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/iron_block.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/iron_block.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class = "box" id="gold_block">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/gold_block.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/gold_block.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+            <div class = "box" id="煤炭_block">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/煤炭_block.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/煤炭_block.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="綠寶石_block">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/綠寶石_block.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/綠寶石_block.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class = "box" id="青金石_block">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/青金石_block.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/青金石_block.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="item">
+            <div class = "box" id="銅_block">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class = "box" id="銅_block1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class = "box" id="銅_block2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class = "box" id="銅_block3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class = "box" id="銅_block4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class = "box" id="銅_block5">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block5.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class = "box" id="銅_block6">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block6.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block6.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class = "box" id="銅_block7">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block7.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block7.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class = "box" id="銅_block8">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block8.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block8.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class = "box" id="銅_block9">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block9.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block9.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class = "box" id="銅_block10">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block10.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block10.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class = "box" id="銅_block11">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block11.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block11.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class = "box" id="銅_block13">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block13.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block13.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class = "box" id="銅_block14">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block14.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block14.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class = "box" id="銅_block15">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block15.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block15.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class = "box" id="銅_block16">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/銅_block16.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/銅_block16.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class = "box" id="石英_block">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./礦物/石英_block.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./礦物/石英_block.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="木" class="tabcontent">
+        <h3>木</h3>
+        <div class="item">
+            <div class="box" id="wood1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wood5">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood5.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood5.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood6">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood6.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood6.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood7">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood7.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood7.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood8">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood8.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood8.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wood9">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood9.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood9.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood10">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood10.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood10.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood11">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood11.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood11.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood12">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood12.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood12.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wood13">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood13.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood13.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood14">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood14.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood14.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood15">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood15.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood15.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood16">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood16.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood16.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wood17">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood17.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood17.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood18">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood18.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood18.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood19">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood19.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood19.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood20">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood20.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood20.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wood21">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood21.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood21.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood22">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood22.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood22.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood23">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood23.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood23.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood24">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood24.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood24.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wood25">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood25.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood25.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood26">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood26.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood26.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood27">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood27.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood27.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood28">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood28.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood28.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wood29">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood29.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood29.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood30">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood30.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood30.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood31">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood31.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood31.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood32">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood32.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood32.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wood33">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood33.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood33.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood34">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood34.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood34.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood35">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood35.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood35.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood36">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood36.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood36.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wood37">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood37.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood37.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood38">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood38.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood38.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood39">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood39.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood39.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood40">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood40.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood40.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wood41">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood41.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood41.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood42">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood42.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood42.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood43">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood43.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood43.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood44">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood44.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood44.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wood45">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood45.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood45.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood46">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood46.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood46.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood47">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood47.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood47.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood48">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood48.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood48.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wood49">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood49.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood49.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood50">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood50.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood50.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood51">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood51.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood51.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood52">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood52.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood52.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wood53">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood53.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood53.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wood54">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./木/wood54.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./木/wood54.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div id="牆" class="tabcontent">
+        <h3>牆</h3>
+        <div class="item">
+            <div class="box" id="wall1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wall1-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall1-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall1-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wall1-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall1-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall1-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wall1-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall1-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall1-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wall1-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall1-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall1-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wall2-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall2-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall2-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wall2-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall2-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall2-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wall2-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall2-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall2-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="wall2-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall2-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall2-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall3-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall3-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall3-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall3-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall3-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall3-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall3-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall3-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall3-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall3-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall3-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall3-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall4-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall4-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall4-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall4-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall4-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall4-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall4-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall4-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall4-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall4-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall4-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall4-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall5">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall5.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall5.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall5-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall5-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall5-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall5-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall5-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall5-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall5-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall5-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall5-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall5-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall5-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall5-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall6">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall6.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall6.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall6-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall6-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall6-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall6-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall6-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall6-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall6-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall6-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall6-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall6-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall6-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall6-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall7">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall7.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall7.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall7-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall7-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall7-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall7-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall7-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall7-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall7-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall7-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall7-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall7-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall7-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall7-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall8">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall8.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall8.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall8-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall8-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall8-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall8-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall8-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall8-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall8-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall8-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall8-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall8-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall8-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall8-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall9">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall9.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall9.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall9-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall9-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall9-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall9-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall9-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall9-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall9-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall9-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall9-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall9-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall9-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall9-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall10">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall10.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall10.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall10-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall10-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall10-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall10-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall10-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall10-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall10-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall10-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall10-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall10-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall10-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall10-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall11">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall11.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall11.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall11-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall11-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall11-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall11-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall11-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall11-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall11-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall11-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall11-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall11-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall11-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall11-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall12">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall12.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall12.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall12-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall12-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall12-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall12-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall12-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall12-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall12-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall12-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall12-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall12-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall12-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall12-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall13">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall13.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall13.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall13-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall13-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall13-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall13-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall13-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall13-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall13-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall13-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall13-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall13-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall13-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall13-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall14">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall14.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall14.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall14-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall14-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall14-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall14-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall14-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall14-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall14-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall14-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall14-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall14-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall14-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall14-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall15">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall15.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall15.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall15-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall15-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall15-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall15-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall15-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall15-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall15-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall15-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall15-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall15-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall15-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall15-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall16">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall16.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall16.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall16-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall16-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall16-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall16-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall16-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall16-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall16-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall16-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall16-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall16-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall16-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall16-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall17">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall17.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall17.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall17-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall17-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall17-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall17-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall17-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall17-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall17-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall17-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall17-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall17-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall17-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall17-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall18">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall18.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall18.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall18-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall18-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall18-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall18-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall18-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall18-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall18-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall18-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall18-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall18-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall18-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall18-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall19">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall19.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall19.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall19-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall19-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall19-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall19-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall19-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall19-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall19-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall19-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall19-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall19-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall19-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall19-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall20">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall20.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall20.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall20-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall20-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall20-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall20-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall20-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall20-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall20-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall20-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall20-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall20-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall20-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall20-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall21">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall21.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall21.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall21-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall21-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall21-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall21-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall21-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall21-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall21-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall21-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall21-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall21-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall21-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall21-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="wall22">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall22.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall22.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall22-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall22-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall22-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall22-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall22-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall22-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall22-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall22-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall22-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="wall22-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./牆/wall22-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./牆/wall22-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="柵欄" class="tabcontent">
+        <h3>柵欄</h3>
+        <div class="item">
+            <div class="box" id="柵欄1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄1-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄1-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄1-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄1-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄1-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄1-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄1-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄1-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄1-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄1-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄1-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄1-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄2-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄2-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄2-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄2-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄2-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄2-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄2-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄2-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄2-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄2-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄2-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄2-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄3-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄3-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄3-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄3-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄3-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄3-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄3-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄3-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄3-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄3-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄3-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄3-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄4-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄4-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄4-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄4-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄4-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄4-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄4-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄4-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄4-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄4-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄4-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄4-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄5">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄5.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄5.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄5-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄5-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄5-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄5-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄5-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄5-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄5-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄5-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄5-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄5-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄5-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄5-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄6">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄6.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄6.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄6-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄6-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄6-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄6-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄6-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄6-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄6-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄6-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄6-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄6-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄6-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄6-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄7">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄7.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄7.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄7-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄7-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄7-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄7-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄7-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄7-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄7-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄7-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄7-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄7-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄7-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄7-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄8">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄8.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄8.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄8-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄8-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄8-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄8-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄8-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄8-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄8-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄8-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄8-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄8-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄8-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄8-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄9">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄9.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄9.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄9-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄9-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄9-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄9-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄9-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄9-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄9-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄9-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄9-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄9-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄9-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄9-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄10">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄10.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄10.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄10-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄10-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄10-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄10-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄10-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄10-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄10-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄10-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄10-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄10-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄10-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄10-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄11">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄11.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄11.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄11-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄11-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄11-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄11-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄11-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄11-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄11-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄11-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄11-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄11-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄11-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄11-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄12">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄12.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄12.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄12-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄12-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄12-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄12-2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄12-2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄12-2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄12-3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄12-3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄12-3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        
+            <div class="box" id="柵欄12-4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄/柵欄12-4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄/柵欄12-4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+
+    <div id="柵欄門" class="tabcontent">
+        <h3>柵欄門</h3>
+        <div class="item">
+            <div class="box" id="柵欄門1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄門1-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門1-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門1-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class="box" id="柵欄門2">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門2.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門2.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄門2-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門2-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門2-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄門3">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門3.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門3.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄門3-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門3-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門3-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class="box" id="柵欄門4">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門4.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門4.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄門4-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門4-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門4-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄門5">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門5.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門5.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄門5-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門5-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門5-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class="box" id="柵欄門6">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門6.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門6.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄門6-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門6-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門6-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄門7">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門7.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門7.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄門7-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門7-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門7-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class="box" id="柵欄門8">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門8.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門8.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄門8-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門8-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門8-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄門9">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門9.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門9.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄門9-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門9-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門9-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+            <div class="box" id="柵欄門10">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門10.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門10.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄門10-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門10-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門10-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            
+            
+        </div>
+        <div class="item">
+            <div class="box" id="柵欄門11">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門11.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門11.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="柵欄門11-1">
+                <div style="border:1px solid black">
+                    <model-viewer camera-controls alt="Model" src="./柵欄門/柵欄門11-1.glb">
+                    </model-viewer>
+                    <button onclick="location.href='./柵欄門/柵欄門11-1.glb'">
+                        下載
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPage(pageName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+        }
+
+        document.getElementById("defaultOpen").click();
+    </script>
+    
+    </body>
+</html> 
