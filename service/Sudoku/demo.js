@@ -258,6 +258,7 @@ function solveByGuessing(board, possibilities, leastFree, stats) {
   var randIndex = getRandom(leastFree.length);
   var randSpot = leastFree[randIndex];
   
+  
   var guesses = [];
   var currentPos = possibilities[randSpot[0]][randSpot[1]];
   
