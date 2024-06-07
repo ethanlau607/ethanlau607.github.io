@@ -9,42 +9,47 @@
 
 <url>
   <loc>https://ethanlau607.github.io/</loc>
-  <lastmod>2024-06-05T04:12:44+00:00</lastmod>
+  <lastmod>2024-06-07T03:12:12+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://ethanlau607.github.io/service/mc_block/index.html</loc>
-  <lastmod>2024-06-05T04:12:44+00:00</lastmod>
+  <loc>https://ethanlau607.github.io/service/Sudoku/index.html</loc>
+  <lastmod>2024-06-07T03:12:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://ethanlau607.github.io/service/Sudoku/index.html</loc>
-  <lastmod>2024-06-05T04:12:44+00:00</lastmod>
+  <loc>https://ethanlau607.github.io/service/mc_block/index.html</loc>
+  <lastmod>2024-06-07T03:12:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ethanlau607.github.io/service/2048/index.html</loc>
+  <lastmod>2024-06-07T03:12:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ethanlau607.github.io/service/pixel_draw_16x16/index.html</loc>
-  <lastmod>2024-06-05T04:12:44+00:00</lastmod>
+  <lastmod>2024-06-07T03:12:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ethanlau607.github.io/service/rubiksCubeSolver/index.html</loc>
-  <lastmod>2024-06-05T04:12:44+00:00</lastmod>
+  <lastmod>2024-06-07T03:12:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ethanlau607.github.io/service/qrcode/index.html</loc>
-  <lastmod>2024-06-05T04:12:44+00:00</lastmod>
+  <lastmod>2024-06-07T03:12:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ethanlau607.github.io/service/color_picker/index.html</loc>
-  <lastmod>2024-06-05T04:12:44+00:00</lastmod>
+  <lastmod>2024-06-07T03:12:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ethanlau607.github.io/service/timer/index.html</loc>
-  <lastmod>2024-06-05T04:12:44+00:00</lastmod>
+  <lastmod>2024-06-07T03:12:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
