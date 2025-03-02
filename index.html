@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>3D打印資訊網</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 30px;
+        }
+
+        .filter-section {
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+
+        .filter-group {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .filter-group h3 {
+            margin: 0 0 12px 0;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .filter-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-option label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            background: white;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .price-range {
+            display: grid;
+            grid-template-columns: 1fr 24px 1fr;
+            gap: 10px;
+            align-items: center;
+        }
+
+        input[type="number"], 
+        input[type="text"] {
+            padding: 8px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            width: 70%;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 0 !important;
+            cursor: pointer;
+            
+        }
+        
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .reset-btn {
+            background: #6c757d;
+            padding: 8px 12px;
+        }
+
+        /* 彈窗樣式 */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .modal-image {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            margin-right: 20px;
+        }
+
+        .modal-header {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .modal-title {
+            flex: 1;
+        }
+
+        .modal-price {
+            font-size: 24px;
+            color: #e44d2e;
+            margin: 10px 0;
+        }
+
+        .modal-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .spec-label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .spec-value {
+            color: #666;
+            max-width: 150px;
+            text-align: right;
+        }
+        .product-info {
+        gap: 2px !important; /* 进一步减少内部间隙 */
+        padding-top: 8px; /* 减少顶部内边距 */
+        }
+        .price-tag {
+        margin-top: 0 !important;
+        padding-top: 4px !important;
+        }
+        /* 修复商品卡边框 */
+        .product-card {
+        border: 1px solid #dee2e6 !important; /* 恢复默认灰色边框 */
+        outline: none !important; /* 移除聚焦轮廓 */
+        box-shadow: none !important; /* 清除阴影干扰 */
+        }
+
+        /* 修复子元素边框（如图片容器） */
+        .product-card img,
+        .product-card .product-info {
+        border: none !important;
+        outline: none !important;
+        }
+        .product-card:hover,
+        .product-card:focus {
+        border-color: #dee2e6 !important; /* 悬停时保持灰色 */
+        outline: none !important;
+        }
+        .product-card{
+            min-height: 300px; 
+            /* 或完全自适应 */
+            height: auto;
+        }
+        .product-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* 关键：垂直分散对齐 */
+        }
+
+        .product-info {
+        flex: 1; /* 占据剩余空间 */
+        display: flex;
+        flex-direction: column;
+        gap: 4px; /* 最小化元素间距 */
+        }
+
+        /* 强制价格标签贴底 */
+        .product-info p:last-child {
+        margin-top: auto !important;
+        }
+        .product-image {
+        height: 180px;
+        width: 100%;
+        object-fit: contain;
+        flex-shrink: 0; /* 防止图片被压缩 */
+        margin-bottom: 8px; /* 控制间距 */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="filter-section">
+        <div class="filter-header">
+            <h2>商品篩選</h2>
+            <button class="reset-btn" onclick="resetFilters()">重設條件</button>
+        </div>
+        
+        <div class="filter-group">
+            <h3>價格範圍</h3>
+            <div class="price-range">
+                <input type="number" id="minPrice" placeholder="最低價">
+                <span>-</span>
+                <input type="number" id="maxPrice" placeholder="最高價">
+            </div>
+        </div>
+
+        <div id="dynamicFilters"></div>
+        <button onclick="applyFilters()" style="width: 100%">套用篩選</button>
+    </div>
+
+    <div class="product-container" id="productContainer"></div>
+
+    <!-- 商品詳情彈窗 -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        let allProducts = [];
+        
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadProducts();
+            generateDynamicFilters();
+        });
+
+        async function loadProducts() {
+            try {
+                const response = await fetch('data.json');
+                allProducts = await response.json();
+                displayProducts(allProducts);
+            } catch (error) {
+                console.error('無法載入商品資料:', error);
+            }
+        }
+
+        function generateDynamicFilters() {
+            const container = document.getElementById('dynamicFilters');
+            const filters = new Set();
+
+            allProducts.forEach(product => {
+                Object.keys(product).forEach(key => {
+                    if (!['id', 'name', 'price', 'description', 'image'].includes(key)) {
+                        filters.add(key);
+                    }
+                });
+            });
+
+            filters.forEach(filterName => {
+                const values = new Set();
+                
+                allProducts.forEach(product => {
+                    const value = product[filterName];
+                    if (value !== undefined) {
+                        if (Array.isArray(value)) {
+                            value.forEach(v => values.add(v.toString()));
+                        } else {
+                            values.add(value.toString());
+                        }
+                    }
+                });
+                
+                const filterGroup = document.createElement('div');
+                filterGroup.className = 'filter-group';
+                if (filterName!="國外版價錢(美金)"){
+                filterGroup.innerHTML = `
+                    <h3>${filterName}</h3>
+                    <div class="filter-options" id="${filterName}Filter"></div>
+                `;
+                const optionsContainer = filterGroup.querySelector('.filter-options');
+                Array.from(values).forEach(value => {
+                    const optionId = `${filterName}_${value}`.replace(/\s/g, '');
+                    optionsContainer.innerHTML += `
+                        <div class="filter-option">
+                            <input type="checkbox" id="${optionId}" value="${value}">
+                            <label for="${optionId}">${value}</label>
+                        </div>
+                    `;
+                });
+
+                container.appendChild(filterGroup);}
+
+                
+            });
+        }
+
+        function applyFilters() {
+            const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+            const maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+            
+            const selectedFilters = {};
+            document.querySelectorAll('.filter-group .filter-options').forEach(container => {
+                const filterName = container.id.replace('Filter', '');
+                const checked = Array.from(container.querySelectorAll('input:checked')).map(i => i.value);
+                if (checked.length > 0) {
+                    selectedFilters[filterName] = checked;
+                }
+            });
+
+            const filtered = allProducts.filter(product => {
+                if (product.price < minPrice || product.price > maxPrice) return false;
+
+                for (const [key, values] of Object.entries(selectedFilters)) {
+                    const productValue = product[key];
+                    if (productValue === undefined) return false;
+
+                    const productValues = Array.isArray(productValue) ? 
+                        productValue.map(v => v.toString()) : 
+                        [productValue.toString()];
+
+                    if (!productValues.some(v => values.includes(v))) return false;
+                }
+
+                return true;
+            });
+
+            displayProducts(filtered);
+        }
+
+        function resetFilters() {
+            document.querySelectorAll('input[type="number"]').forEach(input => input.value = '');
+            document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+            applyFilters();
+        }
+
+        function displayProducts(products) {
+            const container = document.getElementById('productContainer');
+            container.innerHTML = '';
+
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                
+                card.innerHTML = `
+                    ${product.image ? `
+                        <img src="${product.image}" 
+                             class="product-image" 
+                             alt="${product.name}" 
+                             onclick="showProductDetail(${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                    ` : ''}
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p class="basic-info">價格：$${product.price.toLocaleString()}</p>
+                        ${product.description ? `<p class="basic-info">${product.description}</p>` : ''}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function showProductDetail(product) {
+            const modal = document.getElementById('productModal');
+            const modalBody = document.getElementById('modalBody');
+
+            // 建立規格顯示區塊
+            let specsContent = '<div class="specs-grid">';
+            Object.entries(product).forEach(([key, value]) => {
+                if (!['id', 'name', 'description', 'image', 'price'].includes(key)) {
+                    specsContent += `
+                        <div class="spec-item">
+                            <span class="spec-label">${key}</span>
+                            <span class="spec-value">${
+                                Array.isArray(value) ? 
+                                value.join(', ') : 
+                                (typeof value === 'number' ? value.toLocaleString() : value)
+                            }</span>
+                        </div>
+                    `;
+                }
+            });
+            specsContent += '</div>';
+
+            modalBody.innerHTML = `
+                <div class="modal-header">
+                    ${product.image ? `<img src="${product.image}" class="modal-image" alt="${product.name}">` : ''}
+                    <div class="modal-title">
+                        <h2>${product.name}</h2>
+                        <p class="modal-price">$${product.price.toLocaleString()}</p>
+                        ${product.description ? `<p class="modal-description">${product.description}</p>` : ''}
+                    </div>
+                </div>
+                ${specsContent}
+            `;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').style.display = 'none';
+        }
+
+        // 點擊背景關閉彈窗
+        window.onclick = function(event) {
+            const modal = document.getElementById('productModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // ESC鍵關閉
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
