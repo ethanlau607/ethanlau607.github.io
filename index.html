@@ -779,6 +779,51 @@
             box-shadow: 0 3px 6px rgba(0,0,0,0.3);
         }
     </style>
+    <style>
+        .product-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+    
+        .detail-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    
+        .detail-btn:hover {
+            background: #0056b3;
+        }
+    
+        .selected-product {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+    
+        .selected-product:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <style>
+        .product-card {
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        .compare-checkbox {
+            pointer-events: auto; /* 確保checkbox可以點擊 */
+        }
+    </style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTM0RQBZJ6"></script>
@@ -864,16 +909,18 @@
         function displayProducts(products) {
             const container = document.getElementById('productContainer');
             container.innerHTML = products.map(product => `
-                <div class="product-card" onclick="handleProductCardClick(${product.id})">
+                <div class="product-card" onclick="showProductDetail(${product.id})">
                     <img src="${product.image}" class="product-image" alt="${product.name}" onerror="this.src='default-image.jpg'">
                     <div class="product-info">
                         <h3>${product.name}</h3>
                         <div style="margin-top: auto;">
                             <p class="price-tag">RMB¥${product.price}</p>
-                            <label class="compare-checkbox" onclick="event.stopPropagation()">
-                                <input type="checkbox" data-id="${product.id}" onclick="event.stopPropagation(); toggleComparison(${product.id})">
-                                <span>加入比較</span>
-                            </label>
+                            <div class="product-actions">
+                                <label class="compare-checkbox" onclick="event.stopPropagation()">
+                                    <input type="checkbox" data-id="${product.id}" onclick="event.stopPropagation(); toggleComparison(${product.id})">
+                                    <span>加入比較</span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -982,8 +1029,8 @@
                     const productDiv = document.createElement('div');
                     productDiv.className = 'selected-product';
                     productDiv.innerHTML = `
-                        <img src="${product.image}" class="selected-product-image" alt="${product.name}">
-                        <span class="remove-comparison" onclick="toggleComparison(${id})"></span>
+                        <img src="${product.image}" class="selected-product-image" alt="${product.name}" onclick="showProductDetail(${product.id})">
+                        <div class="remove-comparison" onclick="toggleComparison(${product.id})"></div>
                     `;
                     container.appendChild(productDiv);
                 });
