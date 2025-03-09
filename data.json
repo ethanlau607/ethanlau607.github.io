@@ -100,5 +100,22 @@
         "屏幕":"觸控屏",
         "最大打印尺寸":"256*256*256mm",
         "image": "https://cdn03.plentymarkets.com/ioseuwg7moqp/item/images/30132/preview/Bambu-Lab-A1-Combo-PF002-A-SA005-EU-30132.png"
+    },
+    {
+        "id": 7,
+        "name": "Creality Ender-3 V3 SE",
+        "price": 1299,
+        "品牌": "Creality",
+        "最高速度": "250mm/s",
+        "usdPrice":"199.00",
+        "多色打印":"不支持",
+        "自動調平":"支持",
+        "斷料續打":"支持",
+        "X軸":"V型槽輪",
+        "Y軸":"V型槽輪",
+        "Z軸":"單絲杆",
+        "屏幕":"3.2寸彩色旋鈕螢幕",
+        "最大打印尺寸":"220*220*250mm",
+        "image":"https://cdn.shoplazza.com/c5a0b938bcdb80bd46af393ebbb053a1.png"
     }
 ]
