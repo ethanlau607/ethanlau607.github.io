@@ -117,5 +117,22 @@
         "屏幕":"3.2寸彩色旋鈕螢幕",
         "最大打印尺寸":"220*220*250mm",
         "image":"https://www.creality.cn/uploads/20230814/8e3eaec76c10ed74ae3df06ece159a33.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Creality Ender-3 V3 KE",
+        "price": 1399,
+        "品牌": "Creality",
+        "最高速度": "500mm/s",
+        "usdPrice":"279.00",
+        "多色打印":"不支持",
+        "自動調平":"支持",
+        "斷電續打":"支持",
+        "X軸":"溒珠導軌",
+        "Y軸":"金屬線軌",
+        "Z軸":"雙絲杆",
+        "屏幕":"4.3吋彩色觸控屏",
+        "最大打印尺寸":"220*220*240mm",
+        "image": "https://cdn.shoplazza.com/ec77f1a3c3484540ae87d8de9c2f4772_180x.jpg"
     }
 ]
